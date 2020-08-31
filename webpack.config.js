@@ -7,6 +7,7 @@ module.exports = {
   resolve: {
     alias: {
       router: path.resolve(__dirname, "./src/router/"),
+      images: path.resolve(__dirname, "./src/assets/img"),
     },
     extensions: [".js", ".ts", ".jsx", ".tsx"],
   },
@@ -32,7 +33,14 @@ module.exports = {
       {
         test: /\.(png|jpg)$/,
         exclude: /node_modules/,
-        loader: "url-loader?limit=5000",
+        use: {
+          loader: "url-loader",
+          options: {
+            limit: 5000,
+            name: "./img/[hash].[name].[ext]",
+            esModule: false,
+          },
+        },
       },
       {
         test: /\.html$/,

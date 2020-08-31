@@ -1,8 +1,18 @@
 import React from "react";
 import * as classes from "./home.component.style";
-import { switchRoutes } from "router/index"; //Using alias
+import { switchRoutes } from "router/index"; // Using alias for router
+const image = require("images/godzilla.jpg"); // Using alias for image
 
 export const HomeComponent: React.FC = () => {
-  const { mytitle } = classes;
-  return <h1 className={mytitle}>Hello from {switchRoutes.home} component</h1>;
+  const { mytitle, images, mainContainer } = classes;
+  return (
+    <>
+      <main className={mainContainer}>
+        <div>
+          <h1 className={mytitle}>Hello from {switchRoutes.home} component</h1>
+          <img className={images} src={image} alt="godzilla" />
+        </div>
+      </main>
+    </>
+  );
 };

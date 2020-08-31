@@ -5,7 +5,8 @@
     "moduleResolution": "node",
     "baseUrl": "./src/",
     "paths": {
-      "router": ["./router/*"]
+      "router": ["./router/*"],
+      "images": ["./assets/img/*"]
     },
     "declaration": false,
     "noImplicitAny": false,
