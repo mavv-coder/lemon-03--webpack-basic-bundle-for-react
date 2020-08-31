@@ -17,8 +17,7 @@ module.exports = {
   },
   stats: "errors-only",
   output: {
-    filename: "[name].[chunkhash].js",
-    publicPath: "/",
+     filename: "./js/[name].[chunkhash].js",
   },
   devServer: {
     historyApiFallback: true,
