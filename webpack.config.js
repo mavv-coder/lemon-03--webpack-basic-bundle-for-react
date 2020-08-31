@@ -5,7 +5,10 @@ const basePath = __dirname;
 module.exports = {
   context: path.join(basePath, "src"),
   resolve: {
-    extensions: [".js", ".ts", ".tsx"],
+    alias: {
+      router: path.resolve(__dirname, "./src/router/"),
+    },
+    extensions: [".js", ".ts", ".jsx", ".tsx"],
   },
   devtool: "eval-source-map",
   entry: {

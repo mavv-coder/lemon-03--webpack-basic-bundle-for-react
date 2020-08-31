@@ -3,6 +3,10 @@
     "target": "es6",
     "module": "es6",
     "moduleResolution": "node",
+    "baseUrl": "./src/",
+    "paths": {
+      "router": ["./router/*"]
+    },
     "declaration": false,
     "noImplicitAny": false,
     "allowSyntheticDefaultImports": true,
