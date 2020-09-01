@@ -1,5 +1,5 @@
 import React from "react";
-import * as classes from "./home.component.style";
+import * as classes from "./home.style";
 import { switchRoutes } from "router/index"; // Using alias for router
 const image = require("images/godzilla.jpg"); // Using alias for image
 
